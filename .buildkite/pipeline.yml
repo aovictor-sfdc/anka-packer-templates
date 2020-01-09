@@ -1,13 +1,13 @@
 steps:
   - label: Build 10.15.2 Vanilla 
     command: 
-      - "source ~/.bash_profile"
+      - "source ~/.zshrc"
       - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && packer build macos-vanilla-10.15.json; fi"
     agents:
       queue: water-monkey
   - label: Build 10.15.2 CI
     command:
-      - "source ~/.bash_profile"
+      - "source ~/.zshrc"
       - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && packer build macos-ci-10.15.json; fi"
     agents:
       queue: water-monkey
