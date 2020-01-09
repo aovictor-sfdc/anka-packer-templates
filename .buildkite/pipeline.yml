@@ -1,12 +1,12 @@
 steps:
   - label: Build 10.15.2 Vanilla 
     command: 
-      - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd /Users/vao/.asdf/shims/packer && /Users/vao/.asdf/shims/packer build macos-vanilla-10.15.json; fi"
+      - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer && /Users/vao/.asdf/shims/packer build macos-vanilla-10.15.json; fi"
     agents:
       queue: water-monkey
   - label: Build 10.15.2 CI
     command:
-      - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd /Users/vao/.asdf/shims/packer && /Users/vao/.asdf/shims/packer build macos-ci-10.15.json; fi"
+      - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer && /Users/vao/.asdf/shims/packer build macos-ci-10.15.json; fi"
     agents:
       queue: water-monkey
   - label: Anka Flow CI Job
