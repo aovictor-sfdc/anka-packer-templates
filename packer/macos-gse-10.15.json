@@ -19,7 +19,7 @@
     {
       "type": "file",
       "source": "/Users/vao/git/anka-packer-templates/packer/scripts/macos/profiles",
-      "destination": "/var/tmp"
+      "destination": "/Users/anka/Desktop"
     },
     {
       "scripts": [
