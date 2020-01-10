@@ -19,13 +19,13 @@
     },
     {
       "type": "shell",
-      "scripts": [
-        "scripts/macos/sfdc.sh"
-      ],
+      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
-        "vmware-iso": [
-          "echo 'admin' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'"
-        ]
+        "vmware-iso": {
+          "scripts": [
+            "scripts/macos/sfdc.sh"
+          ]
+        }
       }
     }
   ],
