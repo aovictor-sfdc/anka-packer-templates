@@ -13,19 +13,20 @@
   ],
   "provisioners": [
     {
-      "type": "shell",
-      "inline": ["echo $PWD"]
-    },
-    {
       "type": "file",
       "source": "/Users/vao/git/anka-packer-templates/packer/scripts/macos/profiles",
       "destination": "/Users/anka/Desktop"
     },
     {
+      "type": "shell",
       "scripts": [
         "scripts/macos/sfdc.sh"
       ],
-      "type": "shell"
+      "override": {
+        "vmware-iso": {
+          "echo 'admin' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'"
+        }
+      }
     }
   ],
   "variables": {
