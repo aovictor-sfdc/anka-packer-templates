@@ -27,6 +27,12 @@
           ]
         }
       }
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/macos/sfdc.sh"
+      ]
     }
   ],
   "variables": {
