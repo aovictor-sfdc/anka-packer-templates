@@ -1,6 +1,6 @@
 #!/bin/bash
 
-working_dir="/tmp/profiles"
+working_dir="/usr/bin/etc/profiles"
 
 OLDIFS=$IFS
 
