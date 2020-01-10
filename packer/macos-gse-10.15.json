@@ -19,7 +19,7 @@
       "type": "shell"
     },
     {
-      "type": "directory",
+      "type": "file",
       "source": "/scripts/macos/profiles",
       "destination": "/tmp/profiles"
     }
