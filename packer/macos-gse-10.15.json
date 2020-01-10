@@ -21,7 +21,7 @@
     {
       "type": "file",
       "source": "scripts/macos/profiles",
-      "destination": "/var/tmp/"
+      "destination": "/usr/local/etc"
     }
   ],
   "variables": {
