@@ -23,9 +23,9 @@
         "scripts/macos/sfdc.sh"
       ],
       "override": {
-        "vmware-iso": {
+        "vmware-iso": [
           "echo 'admin' | sudo -S sh -c '{{ .Vars }} {{ .Path }}'"
-        }
+        ]
       }
     }
   ],
