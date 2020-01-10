@@ -20,8 +20,8 @@
     },
     {
       "type": "file",
-      "source": "scripts/macos/profiles/",
-      "destination": "/var/tmp/profiles"
+      "source": "scripts/macos/profiles",
+      "destination": "/var/tmp/"
     }
   ],
   "variables": {
