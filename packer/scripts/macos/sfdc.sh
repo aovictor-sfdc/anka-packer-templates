@@ -13,6 +13,7 @@ for i in "${config_profiles[@]}"; do
     echo "$i installed"
   else
     echo "$i failed to install"
+    exit 1
   fi
 done
 

@@ -13,15 +13,15 @@
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "scripts/macos/profiles",
+      "destination": "/usr/local/etc"
+    },
+    {
       "scripts": [
         "scripts/macos/sfdc.sh"
       ],
       "type": "shell"
-    },
-    {
-      "type": "file",
-      "source": "scripts/macos/profiles",
-      "destination": "/usr/local/etc"
     }
   ],
   "variables": {
