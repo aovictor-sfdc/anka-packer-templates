@@ -21,7 +21,7 @@
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
-        "anka-base-nKdIctkZpW": {
+        "veertu-anka": {
           "scripts": [
             "scripts/macos/sfdc.sh"
           ]
