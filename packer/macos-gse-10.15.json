@@ -17,13 +17,9 @@
       "inline": ["echo $PWD"]
     },
     {
-      "type": "shell",
-      "inline": ["echo mkdir -p /usr/local/etc/sfdc"]
-    },
-    {
       "type": "file",
-      "source": "scripts/macos/profiles/",
-      "destination": "/usr/local/etc/sfdc"
+      "source": "scripts/macos/profiles",
+      "destination": "/var/tmp"
     },
     {
       "scripts": [
