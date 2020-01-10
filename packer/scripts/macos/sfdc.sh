@@ -1,7 +1,10 @@
 #!/bin/bash
 
-/usr/bin/profiles install "/var/tmp/profiles/CA Certificate.mobileconfig"
-/usr/bin/profiles install "/var/tmp/profiles/enrollmentProfile.mobileconfig"
+/usr/bin/profiles install -path "/Users/anka/Desktop/profiles/CA Certificate.mobileconfig"
+/usr/bin/profiles install -path "/Users/anka/Desktop/profiles/enrollmentProfile.mobileconfig"
+
+# /usr/bin/profiles install -path "/Users/anka/Desktop/profiles/CA Certificate.mobileconfig"
+# /usr/bin/profiles install -path "/Users/anka/Desktop/profiles/enrollmentProfile.mobileconfig"
 #
 # working_dir="/var/tmp/profiles"
 #
