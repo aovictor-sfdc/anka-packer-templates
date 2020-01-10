@@ -21,7 +21,7 @@
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
-        "vmware-iso": {
+        "anka-base-nKdIctkZpW": {
           "scripts": [
             "scripts/macos/sfdc.sh"
           ]
