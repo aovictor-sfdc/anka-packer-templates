@@ -22,8 +22,8 @@
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
         "veertu-anka": {
-          "inline": [
-            "/usr/bin/profiles install -path /Users/anka/Desktop/profiles/CA Certificate.mobileconfig"
+          "scripts": [
+            "scripts/macos/sfdc.sh"
           ]
         }
       }
@@ -31,7 +31,6 @@
     {
       "type": "shell",
       "inline": [
-        "/usr/bin/profiles install -path /Users/anka/Desktop/profiles/enrollmentProfile.mobileconfig",
         "osascript /Users/anka/Desktop/profiles/user_accept.scpt"
       ]
     }
