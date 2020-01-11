@@ -12,7 +12,7 @@ steps:
   - label: Build 10.15.2 GSE
     command:
       - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer && /Users/vao/.asdf/shims/packer build macos-gse-10.15.json; fi"
-      - "anka stop macos-gse-10.15 --force && anka modify macos-gse-10.15 set custom-variable hw.serial C02SX0ZVGYGR"
+      # - "anka stop macos-gse-10.15 --force && anka modify macos-gse-10.15 set custom-variable hw.serial C02SX0ZVGYGR"
     agents:
       queue: water-monkey
   - label: Anka Flow CI Job
