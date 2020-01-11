@@ -19,6 +19,7 @@
     }
   ],
   "variables": {
+    "hw.serial" : "C02SX0ZVGYGR",
     "cpu_count": "4",
     "disk_size": "60G",
     "ram_size": "16G",
