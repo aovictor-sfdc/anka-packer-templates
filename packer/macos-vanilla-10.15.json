@@ -3,7 +3,6 @@
     {
       "cpu_count": "{{user `cpu_count`}}",
       "disk_size": "{{user `disk_size`}}",
-      "serial": "C02SX0ZVGYGR",
       "installer_app": "/Applications/Install macOS Catalina.app/",
       "ram_size": "{{user `ram_size`}}",
       "source_vm_name": "{{user `source_vm_name`}}",

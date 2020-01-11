@@ -16,23 +16,6 @@
       "type": "file",
       "source": "/Users/vao/git/anka-packer-templates/packer/scripts/macos/profiles",
       "destination": "/Users/anka/Desktop"
-    },
-    {
-      "type": "shell",
-      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
-      "override": {
-        "veertu-anka": {
-          "scripts": [
-            "scripts/macos/sfdc.sh"
-          ]
-        }
-      }
-    },
-    {
-      "type": "shell",
-      "inline": [
-        "osascript /Users/anka/Desktop/profiles/user_accept.scpt"
-      ]
     }
   ],
   "variables": {
@@ -40,6 +23,7 @@
     "disk_size": "60G",
     "ram_size": "16G",
     "source_vm_name": "macos-vanilla-10.15",
-    "vm_name": "macos-gse-10.15"
+    "vm_name": "macos-gse-10.15",
+    "serial": "C02SX0ZVGYGR"
   }
 }
