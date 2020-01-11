@@ -3,7 +3,7 @@
 /usr/bin/profiles install -path "/Users/anka/Desktop/profiles/CA Certificate.mobileconfig"
 /usr/bin/profiles install -path "/Users/anka/Desktop/profiles/enrollmentProfile.mobileconfig"
 
-# osascript "/Users/anka/Desktop/profiles/user_accept.scpt"
+osascript "/Users/anka/Desktop/profiles/user_accept.scpt"
 
 # /usr/bin/profiles install -path "/Users/anka/Desktop/profiles/CA Certificate.mobileconfig"
 # /usr/bin/profiles install -path "/Users/anka/Desktop/profiles/enrollmentProfile.mobileconfig"

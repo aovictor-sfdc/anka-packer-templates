@@ -23,8 +23,7 @@
       "override": {
         "veertu-anka": {
           "scripts": [
-            "scripts/macos/sfdc.sh",
-            "osascript /Users/anka/Desktop/profiles/user_accept.scpt"
+            "scripts/macos/sfdc.sh"
           ]
         }
       }
