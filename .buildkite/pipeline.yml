@@ -24,6 +24,7 @@ steps:
   - label: Build 10.15.2 GSE
     command:
       - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer && /Users/vao/.asdf/shims/packer build macos-gse-10.15.json; fi"
+      - "sleep 10"
       - "/bin/bash packer/scripts/macos/enable_uamdm.sh"
     agents:
       queue: water-monkey
@@ -31,8 +32,6 @@ steps:
     command:
       - "whoami"
       - "pwd"
-      - "env"
-      - "export PATH=/usr/local/bin:$PATH"
       - "which jamf"
       - "sudo jamf version"
     agents:

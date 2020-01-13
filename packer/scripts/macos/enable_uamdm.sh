@@ -34,4 +34,5 @@ else
   exit 1
 fi
 
+anka suspend "$vm_name" && echo "$vm suspended."
 exit 0
