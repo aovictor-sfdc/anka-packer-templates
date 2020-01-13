@@ -25,7 +25,7 @@ steps:
     command:
       - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer && /Users/vao/.asdf/shims/packer build macos-gse-10.15.json; fi"
       - "sleep 20"
-      - "/bin/bash /Users/vao/git/anka-packer-templates/packer/scripts/macos/enable_uamdm.sh"
+      - "/bin/bash scripts/macos/enable_uamdm.sh"
     agents:
       queue: water-monkey
   - label: Anka Flow GSE Job
