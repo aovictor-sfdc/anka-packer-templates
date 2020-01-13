@@ -24,7 +24,7 @@ steps:
   - label: Build 10.15.2 GSE
     command:
       - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer && /Users/vao/.asdf/shims/packer build macos-gse-10.15.json; fi"
-      - "/bin/bash enable_uamdm.sh"
+      - "/bin/bash packer/scripts/macos/enable_uamdm.sh"
     agents:
       queue: water-monkey
   - label: Anka Flow GSE Job
