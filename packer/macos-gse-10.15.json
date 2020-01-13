@@ -19,7 +19,7 @@
     },
     {
       "type": "shell",
-      "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
+      "execute_command": "echo 'admin'|sudo -S sh '{{.Path}}'",
       "override": {
         "veertu-anka": {
           "scripts": [
