@@ -34,5 +34,6 @@ else
   exit 1
 fi
 
+sleep 120
 anka suspend "$vm_name" && echo "$vm suspended."
 exit 0
