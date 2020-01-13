@@ -20,7 +20,7 @@ VNCSTR=$(anka show "$vm_name" vnc_connection_string | awk -F\/\/ '{print $NF}')
 echo "VNCSTR: $VNCSTR"
 
 if which /Users/vao/.pyenv/shims/vncdo; then
-  vncdo -s "${VNCSTR}" -p admin move 220 180 click 1 pause 2 \
+  /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin move 220 180 click 1 pause 2 \
     move 0 0 click 1 pause 2 \
     type "s" key enter pause 2 \
     type "profiles" pause 2 \
