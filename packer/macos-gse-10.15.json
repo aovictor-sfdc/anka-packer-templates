@@ -13,6 +13,10 @@
   ],
   "provisioners": [
     {
+      "type": "shell",
+      "inline": [ "/bin/mkdir -p /Users/anka/Desktop" ]
+    },
+    {
       "type": "file",
       "source": "../packer/profiles",
       "destination": "/Users/anka/Desktop"
@@ -22,9 +26,7 @@
       "execute_command": "echo 'admin'|sudo -S sh '{{.Path}}'",
       "override": {
         "veertu-anka": {
-          "scripts": [
-            "scripts/macos/sfdc.sh"
-          ]
+          "scripts": [ "scripts/macos/sfdc.sh" ]
         }
       }
     }
