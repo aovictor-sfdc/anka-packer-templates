@@ -18,7 +18,7 @@
     },
     {
       "type": "file",
-      "source": "/Users/vao/git/anka-paker-templates/packer/profiles/",
+      "source": "/Users/vao/git/anka-packer-templates/packer/profiles/",
       "destination": "/Users/anka/Desktop/profiles"
     },
     {
