@@ -18,7 +18,7 @@
     },
     {
       "type": "file",
-      "source": "profiles/",
+      "source": "../profiles/",
       "destination": "/Users/anka/Desktop/profiles"
     },
     {
@@ -26,7 +26,7 @@
       "execute_command": "echo 'admin'|sudo -S sh '{{.Path}}'",
       "override": {
         "veertu-anka": {
-          "scripts": [ "scripts/macos/sfdc.sh" ]
+          "scripts": [ "../scripts/macos/sfdc.sh" ]
         }
       }
     }
