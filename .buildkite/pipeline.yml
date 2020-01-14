@@ -23,9 +23,10 @@ steps:
           source_vm_name: macos-ci-10.15
   - label: Build 10.15.2 GSE
     command:
+      - "echo $pwd"
       - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15.json; fi"
       - "sleep 20"
-      - 'echo $pwd'
+      - "echo $pwd"
       - "/bin/bash ../scripts/macos/enable_uamdm.sh"
     agents:
       queue: water-monkey
