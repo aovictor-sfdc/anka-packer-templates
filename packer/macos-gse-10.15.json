@@ -14,11 +14,11 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": [ "/bin/mkdir -p /Users/anka/Desktop/profiles" ]
+      "inline": ["mkdir -p ~/Desktop/profiles"]
     },
     {
       "type": "file",
-      "source": "../packer/profiles/",
+      "source": "../profiles/",
       "destination": "/Users/anka/Desktop/profiles"
     },
     {
