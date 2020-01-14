@@ -14,7 +14,7 @@
   "provisioners": [
     {
       "type": "shell",
-      "inline": ["mkdir -p ~/Desktop/profiles"]
+      "inline": ["/bin/mkdir -p ~/Desktop/profiles"]
     },
     {
       "type": "file",
