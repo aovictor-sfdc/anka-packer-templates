@@ -26,7 +26,7 @@ steps:
       - "if [[ ! $(anka show macos-gse-10.15-qa) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-qa.json; fi"
     agents:
       queue: water-monkey
-  - label: Anka Flow GSE Job
+  - label: Anka Flow GSE qa Job
     command:
       - "whoami"
       - "pwd"
@@ -47,7 +47,7 @@ steps:
       - "/bin/bash ../scripts/macos/enable_uamdm.sh"
     agents:
       queue: water-monkey
-  - label: Anka Flow GSE Job
+  - label: Anka Flow GSE p Job
     command:
       - "whoami"
       - "pwd"
@@ -68,7 +68,7 @@ steps:
   #     # - "/bin/bash ../scripts/macos/enable_uamdm.sh"
   #   agents:
   #     queue: water-monkey
-  # - label: Anka Flow GSE Job
+  # - label: Anka Flow DEP Job
   #   command:
   #     - "whoami"
   #     - "pwd"
