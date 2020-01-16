@@ -36,6 +36,6 @@
     "disk_size": "60G",
     "ram_size": "16G",
     "source_vm_name": "macos-vanilla-10.15",
-    "vm_name": "macos-gse-10.15"
+    "vm_name": "macos-gse-10.15-p"
   }
 }
