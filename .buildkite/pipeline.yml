@@ -21,33 +21,12 @@ steps:
     plugins:
       - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
           source_vm_name: macos-ci-10.15
-  - label: Build 10.15.2 GSE qa
-    command:
-      - "if [[ ! $(anka show macos-gse-10.15-qa) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-qa.json; fi"
-    agents:
-      queue: water-monkey
-  - label: Anka Flow GSE qa Job
-    command:
-      - "whoami"
-      - "pwd"
-      - "sleep 30"
-      - "which jamf"
-      - "sleep 30"
-      - "sudo jamf version"
-      - "sudo jamf policy -event pipeline"
-    agents:
-      queue: water-monkey
-    plugins:
-      - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
-          source_vm_name: macos-gse-10.15-qa
-  # - label: Build 10.15.2 GSE p
+  # - label: Build 10.15.2 GSE qa
   #   command:
-  #     - "if [[ ! $(anka show macos-gse-10.15-p) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-p.json; fi"
-  #     - "sleep 20"
-  #     - "/bin/bash ../scripts/macos/enable_uamdm.sh"
+  #     - "if [[ ! $(anka show macos-gse-10.15-qa) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-qa.json; fi"
   #   agents:
   #     queue: water-monkey
-  # - label: Anka Flow GSE p Job
+  # - label: Anka Flow GSE qa Job
   #   command:
   #     - "whoami"
   #     - "pwd"
@@ -60,7 +39,28 @@ steps:
   #     queue: water-monkey
   #   plugins:
   #     - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
-  #         source_vm_name: macos-gse-10.15-p
+  #         source_vm_name: macos-gse-10.15-qa
+  - label: Build 10.15.2 GSE p
+    command:
+      - "if [[ ! $(anka show macos-gse-10.15-p) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-p.json; fi"
+      - "sleep 20"
+      - "/bin/bash ../scripts/macos/enable_uamdm.sh"
+    agents:
+      queue: water-monkey
+  - label: Anka Flow GSE p Job
+    command:
+      - "whoami"
+      - "pwd"
+      - "sleep 30"
+      - "which jamf"
+      - "sleep 30"
+      - "sudo jamf version"
+      - "sudo jamf policy -event pipeline"
+    agents:
+      queue: water-monkey
+    plugins:
+      - https://github.com/call/anka-flow-buildkite-plugin#v0.0.3:
+          source_vm_name: macos-gse-10.15-p
   # - label: Build 10.15.2 DEP
   #   command:
   #     - "if [[ ! $(anka show macos-dep-10.15) ]]; then anka create --ram-size 8G --cpu-count 2 --disk-size 60G --app /Applications/Install\ macOS\ Catalina.app macos-dep --interactive  && anka modify macos-dep set custom-variable hw.serial 'C02SX0ZVGYGR' && anka modify macos-dep set custom-variable hw.product 'MacBookPro13,2'; fi"
