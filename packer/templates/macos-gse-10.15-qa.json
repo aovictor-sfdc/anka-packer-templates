@@ -26,7 +26,7 @@
       "execute_command": "echo 'admin'|sudo -S sh '{{.Path}}'",
       "override": {
         "veertu-anka": {
-          "scripts": [ "../scripts/macos/sfdc.sh" ]
+          "scripts": [ "../scripts/macos/gse-quickadd.sh" ]
         }
       }
     }
