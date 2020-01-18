@@ -1,6 +1,6 @@
 #!/bin/bash
 
-vm_name="macos-gse-10.15"
+vm_name="$(anka list | grep -i gse | awk -F\| '{print $2}')"
 
 if ! [[ $(anka show "$vm_name" status) == running ]]; then
   echo "vm not running."
