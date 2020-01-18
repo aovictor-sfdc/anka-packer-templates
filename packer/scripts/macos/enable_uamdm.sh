@@ -1,6 +1,7 @@
 #!/bin/bash
 
 vm_name="$(anka list | grep -i gse | awk -F\| '{print $2}')"
+vm_name="${vm_name:1}"
 
 if ! [[ $(anka show "$vm_name" status) == running ]]; then
   echo "vm not running."
