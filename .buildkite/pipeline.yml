@@ -35,7 +35,7 @@ steps:
       - "which jamf"
       - "sleep 30"
       - "sudo jamf version"
-      - "sudo jamf policy -event pipeline"
+      - "sudo jamf policy -event splashbuddycatalina"
     agents:
       queue: water-monkey
     plugins:
