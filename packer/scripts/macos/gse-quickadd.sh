@@ -12,8 +12,8 @@ ADCompName="gse-qa-vm"
 echo "jamf enrolled."
 
 # kill any jamf prompt
-echo "sleep 60 while enrolling"
-sleep 60
+echo "sleep 80 while enrolling"
+sleep 80
 /usr/bin/killall KeyboardSetupAssistant && echo "keyboard setup ast killed"
 /usr/bin/killall jamfHelper && echo "jamfHelper killed"
 echo "sleep 60 for policies"
