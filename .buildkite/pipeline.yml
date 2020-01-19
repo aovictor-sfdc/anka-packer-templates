@@ -30,9 +30,8 @@ steps:
     command:
       - "whoami"
       - "pwd"
-      - "sleep 30"
+      - "sudo fdesetup status"
       - "which jamf"
-      - "sleep 30"
       - "sudo jamf version"
       - "sudo jamf policy -event splashbuddycatalina"
     agents:
