@@ -24,6 +24,7 @@ steps:
   - label: Build 10.15.2 GSE qa
     command:
       - "if [[ ! $(anka show macos-gse-10.15-qa) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-qa.json; fi"
+      - "echo $(pwd)"
       - "/bin/bash ../scripts/macos/enable_uamdm.sh"
     agents:
       queue: water-monkey
