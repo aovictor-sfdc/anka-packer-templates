@@ -23,9 +23,9 @@ steps:
           source_vm_name: macos-ci-10.15
   - label: Build 10.15.2 GSE qa
     command:
-      - "if [[ ! $(anka show macos-gse-10.15-qa) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-qa.json; fi"
-      - "echo $(pwd)"
-      - "/bin/bash ../scripts/macos/enable_uamdm.sh"
+      - "if [[ ! $(anka show macos-gse-10.15-qa) ]]; then
+          cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15-qa.json && /bin/bash ../scripts/macos/enable_uamdm.sh
+          fi"
     agents:
       queue: water-monkey
   - label: Anka Flow GSE qa Job
