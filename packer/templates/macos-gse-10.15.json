@@ -26,7 +26,7 @@
       "execute_command": "echo 'admin'|sudo -S sh '{{.Path}}'",
       "override": {
         "veertu-anka": {
-          "scripts": [ "../scripts/macos/gse-p.sh" ]
+          "scripts": [ "../scripts/macos/enroll.sh" ]
         }
       }
     }
@@ -36,6 +36,6 @@
     "disk_size": "60G",
     "ram_size": "16G",
     "source_vm_name": "macos-vanilla-10.15",
-    "vm_name": "macos-gse-10.15-p"
+    "vm_name": "macos-gse-10.15"
   }
 }
