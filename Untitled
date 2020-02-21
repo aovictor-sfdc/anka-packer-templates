@@ -1,0 +1,36 @@
+gse-qa-vm28668
+
+sudo jamf policy -event splashbuddycatalina
+
+
+C02J95D6G1HW
+C02J9F29G1HW
+
+
+
+
+
+
+sudo jamf policy -event splashbuddycatalina
+
+#!/bin/bash
+
+loggedInUser=`/bin/ls -l /dev/console | /usr/bin/awk '{ print $3 }'`
+SBUfolder="/Users/$loggedInUser/Library/Containers/io.fti.SplashBuddy/"
+
+
+if [ -d "$SBUfolder" ]
+then
+		touch /Library/ClientEngineering/DEP/.InitialConfigurationComplete
+		jamf recon
+		sudo jamf flushPolicyHistory
+		sleep 3
+		jamf policy -trigger DEPReSetup1.8
+fi
+
+
+
+82242
+
+
+sudo jamf policy -event issuenewkey
