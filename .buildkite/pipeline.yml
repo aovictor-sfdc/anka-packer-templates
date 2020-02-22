@@ -8,7 +8,7 @@ steps:
   - label: Build 10.15 CI
     command:
       - "source ~/.bash_profile"
-      - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-ci-10.15.json; fi"
+      - "if [[ ! $(anka show macos-ci-10.15) ]]; then cd packer/templates && packer build macos-ci-10.15.json; fi"
     agents:
       queue: water-monkey
   - label: Anka Flow CI Job
@@ -28,24 +28,24 @@ steps:
   - label: Build 10.15 GSE
     command:
       - "source ~/.bash_profile"
-      - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-gse-10.15.json && /bin/bash ../scripts/macos/enable_uamdm.sh; fi"
+      - "if [[ ! $(anka show macos-gse-10.15) ]]; then cd packer/templates && packer build macos-gse-10.15.json && /bin/bash ../scripts/macos/enable_uamdm.sh; fi"
     agents:
       queue: water-monkey
-  - label: Anka Flow GSE qa Job
-    command:
-      - "whoami"
-      - "pwd"
-      - "sudo fdesetup status"
-      - "which jamf"
-      - "sudo jamf version"
-      - "sudo jamf policy -event splashbuddycatalina"
-    agents:
-      queue: water-monkey
-    plugins:
-      - chef/anka#v0.5.6:
-          vm-name: macos-gse-10.15
-          wait-network: true
-          bash-interactive: true
+  # - label: Anka Flow GSE qa Job
+  #   command:
+  #     - "whoami"
+  #     - "pwd"
+  #     - "sudo fdesetup status"
+  #     - "which jamf"
+  #     - "sudo jamf version"
+  #     - "sudo jamf policy -event splashbuddycatalina"
+  #   agents:
+  #     queue: water-monkey
+  #   plugins:
+  #     - chef/anka#v0.5.6:
+  #         vm-name: macos-gse-10.15
+  #         wait-network: true
+  #         bash-interactive: true
   # - label: Build 10.15.2 DEP
   #   command:
         # - "source ~/.bash_profile"
