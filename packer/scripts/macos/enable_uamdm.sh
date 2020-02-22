@@ -24,14 +24,11 @@ if which /Users/vao/.pyenv/shims/vncdo; then
   echo "enabling filevault...60 seconds...."
   /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin key super-shift-q \
     key return pause 10 \
-    type "admin" \
+    type "admin" key return pause 2 \
+    key return pause 20 \
     key return pause 5 \
-    key return pause 15 \
-    key return pause 5 \
-    type "a" \
-    key return pause 5 \
-    type "admin" pause 2 \
-    key return pause 5
+    type "a" key return pause 2 \
+    type "admin" key return pause 10
   echo "provisioning machine..."
   /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin key super-space pause 1\
     type "terminal" pause 1 \
@@ -42,9 +39,10 @@ if which /Users/vao/.pyenv/shims/vncdo; then
     key return pause 30
   echo "kickstart..."
   /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin key super-space pause 1\
-    move 840 655 click 1 pause 2 \
     type "kickstart" \
-    key return pause 2
+    key return pause 230 \
+    move 860 655 click 1 pause 2 \
+    key return
 else
   echo "vncdo not installed"
   exit 1
