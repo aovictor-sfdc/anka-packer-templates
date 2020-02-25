@@ -2,7 +2,7 @@ steps:
   - label: Build 10.15 Vanilla
     command:
       - "source ~/.bash_profile"
-      - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer/templates && /Users/vao/.asdf/shims/packer build macos-vanilla-10.15.json; fi"
+      - "if [[ ! $(anka show macos-vanilla-10.15) ]]; then cd packer/templates && packer build macos-vanilla-10.15.json; fi"
     agents:
       queue: water-monkey
   - label: Build 10.15 CI
