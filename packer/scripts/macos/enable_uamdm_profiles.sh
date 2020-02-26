@@ -19,21 +19,21 @@ echo "VNCSTR: $VNCSTR"
 if which /Users/vao/.pyenv/shims/vncdo; then
   # enable UAMDM profiles
   echo "enable UAMDM profiles...15 seconds..."
-  /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin move 250 225 click 1 pause 2 \
+  /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin move 220 180 click 1 pause 2 \
     move 0 0 click 1 pause 2 \
     type "s" key enter pause 2 \
     type "profiles" pause 2 \
     key return pause 2 \
-    move 600 235 click 1 pause 2 \
-    move 660 240 click 1 pause 2 \
+    move 570 240 click 1 pause 2 \
+    move 630 240 click 1 pause 2 \
     key super-q
   # enable filevault
   echo "enabling filevault...60 seconds...."
   /Users/vao/.pyenv/shims/vncdo -s "${VNCSTR}" -p admin key super-shift-q \
-    key return pause 5 \
+    key return pause 10 \
     type "admin" \
     key return pause 5 \
-    key return pause 20 \
+    key return pause 15 \
     key return pause 5 \
     type "a" \
     key return pause 5 \

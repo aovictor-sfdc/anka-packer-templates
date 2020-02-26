@@ -2,3 +2,4 @@
 *.mobileconfig
 *.bak
 *.pkg
+secrets.sh
